@@ -6,7 +6,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import connection.DBconnection;
+import entityLayer.CastMember;
 import entityLayer.Movie;
+import entityLayer.Review;
 import entityLayer.User;
 import org.junit.After;
 import org.junit.Assert;
@@ -22,7 +24,9 @@ public class MovieJdbcTest {
     //private static final String ADD_USER_QUERY = "";
 
     private MovieDao movieDao = new MovieDao();
+    private CastMemberDao castMemberDao = new CastMemberDao();
     private UserDao userDao = new UserDao();
+    private ReviewDao reviewDao = new ReviewDao();
 
     private Connection connection;
 
@@ -47,17 +51,30 @@ public class MovieJdbcTest {
 
     @Test
     public void testGetUserById() throws SQLException {
-
         User user1 = userDao.getById(1L);
         Assert.assertEquals(1L, user1.getId());
         Assert.assertEquals("Дмитрий", user1.getFirstName());
-
     }
 
     @Test
-    public void testGetMovieWithYears() throws SQLException {
+    public void testGetMovieById() throws SQLException {
         Movie movie = movieDao.getById(1L);
         Assert.assertEquals(1L, movie.getId());
+        Assert.assertEquals("Властелин колец: Братство кольца", movie.getName());
+    }
+
+    @Test
+    public void testGetCastMemberById() throws SQLException {
+        CastMember castMember = castMemberDao.getById(1L);
+        Assert.assertEquals(1L, castMember.getId());
+        Assert.assertEquals("Питер", castMember.getFirstName());
+    }
+
+    @Test
+    public void testGetReviewById() throws SQLException {
+        Review review = reviewDao.getById(1L);
+        Assert.assertEquals(1L, review.getId());
+        Assert.assertEquals(10, review.getRating());
     }
 
     @Test
@@ -115,6 +132,4 @@ public class MovieJdbcTest {
             e.printStackTrace();
         }
     }
-
-
 }

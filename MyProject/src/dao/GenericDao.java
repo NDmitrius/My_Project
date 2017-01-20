@@ -14,7 +14,7 @@ import java.util.Formatter;
  */
 public abstract class GenericDao <T extends Entity> {
 
-    private static final String GENERIC_GET_BY_ID_QUERY = "SELECT * FROM '%s' WHERE LIKE '%id = %id'";
+    private static final String GENERIC_GET_BY_ID_QUERY = "SELECT * FROM %s";
 
     public abstract T getById(long id);
 

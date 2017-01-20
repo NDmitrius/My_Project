@@ -26,8 +26,10 @@ public class Review implements Entity {
         this.textOfComment = textOfComment;
     }
 
-    public Review(long revie_id, long user_id, long movie_id, int rank, String comment) {
-
+    public Review(long id, int rating, String textOfComment) {
+        this.id = id;
+        this.rating = rating;
+        this.textOfComment = textOfComment;
     }
 
     public Movie getMovie() {

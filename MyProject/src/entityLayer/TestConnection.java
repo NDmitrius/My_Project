@@ -24,8 +24,7 @@ public class TestConnection {
 
 
         String query1 = "select count(*) from movies";
-        String query2 = "SELECT name AS Фильм, year AS Год, country AS Страна FROM movies";
-
+        String query2 = "SELECT name, year, country FROM movies";
 
 
         try {
@@ -62,7 +61,15 @@ public class TestConnection {
             e.printStackTrace();
         }
 
+        try {
 
+            MovieDao movieDao = new MovieDao();
+            Movie movie = movieDao.getById(1L);
+            System.out.println(movie.getId() + " " + movie.getName());
+            myConnection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
 
     }

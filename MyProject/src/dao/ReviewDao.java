@@ -18,8 +18,7 @@ public class ReviewDao extends GenericDao<Review> {
         ResultSet resultSet = getResultById(NAME_TABLE, id);
         try {
             if (resultSet != null && resultSet.next()) {
-                result = new Review(resultSet.getLong("revie_id"), resultSet.getLong("user_id"),
-                        resultSet.getLong("movie_id"), resultSet.getInt("rank"),
+                result = new Review(resultSet.getLong("review_id"), resultSet.getInt("rank"),
                         resultSet.getString("comment"));
             }
         } catch (SQLException ex) {
