@@ -18,6 +18,8 @@ public abstract class GenericDao <T extends Entity> {
 
     public abstract T getById(long id);
 
+    public abstract void initDB();
+
     protected ResultSet getResultById(String tableName, long id) {
         Connection connection = DBconnection.getConnection();
         try {
@@ -29,4 +31,6 @@ public abstract class GenericDao <T extends Entity> {
         }
         return null;
     }
+
+    public abstract void closeConnection();
 }

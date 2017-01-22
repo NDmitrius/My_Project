@@ -78,11 +78,30 @@ public class MovieJdbcTest {
     }
 
     @Test
+    public void testGetAllMoviesGenre() throws SQLException {
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery("SELECT m.name, m.year, m.country, g.genre FROM movies AS m " +
+                "INNER JOIN movies_genre AS mg ON m.movie_id = mg.movie_id JOIN genre AS g ON mg.genre_id = g.genre_id");
+        Assert.assertTrue(resultSet.next());
+        Assert.assertEquals("Властелин колец: Братство кольца", resultSet.getString("name"));
+    }
+
+    @Test
     public void testMovieByYears() throws SQLException {
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery("SELECT name, year, country FROM movies WHERE year = '2003'");
         resultSet.next();
         Assert.assertEquals("Властелин колец: Возвращение короля", resultSet.getString("name"));
+    }
+
+    @Test
+    public void testGetAllCastMemberMovies() throws SQLException {
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery("SELECT c.fname, c.lname, c.date_of_birth, m.name FROM castmembers AS c \n" +
+                "INNER JOIN movies_members AS mm ON c.cm_id = mm.cm_id JOIN movies AS m ON mm.movie_id = m.movie_id");
+        Assert.assertTrue(resultSet.next());
+        Assert.assertEquals("Питер", resultSet.getString("fname"));
+        Assert.assertEquals("Джексон", resultSet.getString("lname"));
     }
 
     @Test

@@ -1,18 +1,16 @@
 package entityLayer;
 
-import connection.DBconnection;
+import dao.CastMemberDao;
 import dao.MovieDao;
+import dao.ReviewDao;
+import dao.UserDao;
 
 import java.sql.*;
-import java.time.LocalDate;
 
 /**
  * Created by DMITRIUS on 19.01.2017.
  */
 public class TestConnection {
-    private static Connection myConnection;
-    private static Statement statement;
-    private static ResultSet resultSet;
 
     public static void main(String[] args) {
 
@@ -22,55 +20,84 @@ public class TestConnection {
             e.printStackTrace();
         }
 
-
-        String query1 = "select count(*) from movies";
-        String query2 = "SELECT name, year, country FROM movies";
-
-
+        MovieDao movieDao = new MovieDao();
+        movieDao.initDB();
         try {
-            myConnection = DBconnection.getConnection();
-            statement = myConnection.createStatement();
-            resultSet = statement.executeQuery(query1);
-            while (resultSet.next()) {
-                int count = resultSet.getInt(1);
-                System.out.println("Total number of movies in the table: " + count);
-            }
-            myConnection.close();
-            statement.close();
-            resultSet.close();
+//            movieDao.addInTableMovies("Сокровище нации", 2004, "США");
+//            movieDao.addInTableMoviesGenre(11, 21);
+//            movieDao.addInTableMoviesGenre(11, 6);
+//            movieDao.addInTableMoviesGenre(11, 3);
+//            movieDao.addInTableMovies("Сокровище нации 2", 2007, "США");
+//            movieDao.addInTableMoviesGenre(12, 21);
+//            movieDao.addInTableMoviesGenre(12, 6);
+//            movieDao.addInTableMoviesGenre(12, 3);
+            movieDao.getAllMovies();
+            System.out.println();
+            movieDao.getNumberMovies();
+            System.out.println();
+            movieDao.geAllMoviesWithGenre();
+            System.out.println();
+            movieDao.getMovieByYear(2007);
+            System.out.println();
+            movieDao.getMovieByCastmember("Орландо", "Блум");
+            System.out.println();
+            movieDao.getMovieByGenre("боевик");
+//            Movie movie = movieDao.getById(2L);
+//            System.out.println(movie.getId() + " " + movie.getName());
+            movieDao.closeConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
+        System.out.println();
+
+        CastMemberDao castMemberDao = new CastMemberDao();
+        castMemberDao.initDB();
         try {
-            String query3 = "SELECT * FROM movies;";
-            myConnection = DBconnection.getConnection();
-            statement = myConnection.createStatement();
-            resultSet = statement.executeQuery(query3);
-            while (resultSet.next()) {
-                int id = resultSet.getInt("movie_id");
-                String name = resultSet.getString("name");
-                LocalDate year = resultSet.getObject("year", LocalDate.class);
-                String country = resultSet.getString("country");
-                System.out.println(id + " " + name + " " + year + " " + country);
-            }
-            myConnection.close();
-            statement.close();
-            resultSet.close();
+            castMemberDao.getAllCastMembers();
+            System.out.println();
+//            castMemberDao.getAllCastmembersWithMovies();
+            castMemberDao.getCatMemberByMovie("Хоббит: Битва пяти воинств");
+            System.out.println();
+            castMemberDao.getCastmembersByName("Мартин");
+            System.out.println();
+            castMemberDao.getCastmembersByName("Фриман");
+            System.out.println();
+            castMemberDao.getCastmembersByType("режиссер");
+            castMemberDao.getCastmembersByType("актер");
+            movieDao.closeConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        try {
+        System.out.println();
 
-            MovieDao movieDao = new MovieDao();
-            Movie movie = movieDao.getById(1L);
-            System.out.println(movie.getId() + " " + movie.getName());
-            myConnection.close();
+        UserDao userDao = new UserDao();
+        userDao.initDB();
+        try {
+            userDao.getAllUsers();
+            System.out.println();
+            userDao.getAllUsersWithReview();
+            System.out.println();
+            userDao.getUserByName("Дмитрий", "Нестерчук");
+            System.out.println();
+            userDao.getUserByNameWithReview("Дмитрий", "Нестерчук");
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
+        System.out.println();
 
+        ReviewDao reviewDao = new ReviewDao();
+        reviewDao.initDB();
+        try {
+            reviewDao.getAllReviews();
+            System.out.println();
+            reviewDao.getAllRanks();
+            System.out.println();
+            reviewDao.getReviewByMovie("Хоббит: Нежданное путешествие");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

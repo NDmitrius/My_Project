@@ -19,10 +19,19 @@
       <file leaf-file-name="MovieDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dao/MovieDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="78" column="26" lean-forward="false" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1485041942709" expanded="true" signature="322:379" ph="INSERT INTO movies... " />
+                <marker date="1485041942709" expanded="true" signature="437:496" ph="INSERT INTO movies_genre... " />
+                <marker date="1485041942709" expanded="true" signature="549:569" ph="SELECT * FRO... movies" />
+                <marker date="1485041942709" expanded="true" signature="628:821" ph="SELECT m.nam... movies" />
+                <marker date="1485041942709" expanded="true" signature="877:924" ph="SELECT name,... movies" />
+                <marker date="1485041942709" expanded="true" signature="986:1189" ph="SELECT name,... movies" />
+                <marker date="1485041942709" expanded="true" signature="986:1190" ph="SELECT m.nam... movies" />
+                <marker date="1485041942709" expanded="true" signature="1248:1443" ph="SELECT m.nam... movies" />
+                <marker date="1485041942709" expanded="true" signature="1499:1526" ph="SELECT COUNT... movies" />
               </folding>
             </state>
           </provider>
@@ -31,29 +40,33 @@
       <file leaf-file-name="CastMemberDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dao/CastMemberDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="470">
+              <caret line="80" column="54" lean-forward="false" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
+              <folding>
+                <marker date="1485041942584" expanded="true" signature="372:442" ph="INSERT INTO castmembers... " />
+                <marker date="1485041942584" expanded="true" signature="502:576" ph="INSERT INTO movies_members... " />
+                <marker date="1485041942584" expanded="true" signature="634:659" ph="SELECT * FRO... castmembers" />
+                <marker date="1485041942584" expanded="true" signature="729:917" ph="SELECT c.fna... castmembers" />
+                <marker date="1485041942584" expanded="true" signature="980:1212" ph="SELECT c.fna... castmembers" />
+                <marker date="1485041942584" expanded="true" signature="1274:1371" ph="SELECT fname... castmembers" />
+                <marker date="1485041942584" expanded="true" signature="1433:1635" ph="SELECT c.fna... castmembers" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieJdbcTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/dao/MovieJdbcTest.java">
+      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176">
-              <caret line="40" column="41" lean-forward="true" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+            <state relative-caret-position="360">
+              <caret line="82" column="23" lean-forward="true" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1484951901714" expanded="true" signature="1215:1242" ph="SELECT COUNT... movies" />
-                <marker date="1484951901714" expanded="true" signature="1337:1556" ph="..." />
-                <marker date="1484951901714" expanded="true" signature="2467:2525" ph="SELECT name,... " />
-                <marker date="1484951901714" expanded="true" signature="2841:3111" ph="SELECT c.fna... castmembers" />
-                <marker date="1484951901714" expanded="true" signature="3486:3599" ph="SELECT r.ran... reviews" />
-                <marker date="1484951901714" expanded="true" signature="3486:3649" ph="SELECT r.ran... reviews" />
-                <marker date="1484951901714" expanded="true" signature="3950:4061" ph="SELECT m.nam... movies" />
-                <marker date="1484951901714" expanded="true" signature="3950:4151" ph="SELECT m.nam... movies" />
-                <marker date="1484951901714" expanded="true" signature="4500:4672" ph="SELECT u.fna... users" />
+                <marker date="1485041942538" expanded="true" signature="339:418" ph="INSERT INTO users... " />
+                <marker date="1485041942538" expanded="true" signature="470:489" ph="SELECT * FRO... users" />
+                <marker date="1485041942538" expanded="true" signature="553:678" ph="SELECT u.fna... users" />
+                <marker date="1485041942538" expanded="true" signature="733:834" ph="SELECT u.fna... users" />
+                <marker date="1485041942538" expanded="true" signature="901:1060" ph="SELECT u.fna... users" />
               </folding>
             </state>
           </provider>
@@ -62,47 +75,48 @@
       <file leaf-file-name="ReviewDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dao/ReviewDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="21" column="56" lean-forward="true" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="-1210">
+              <caret line="17" column="69" lean-forward="false" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1485043354546" expanded="true" signature="295:369" ph="INSERT INTO reviews... " />
+                <marker date="1485043354546" expanded="true" signature="423:444" ph="SELECT * FRO... reviews" />
+                <marker date="1485043354546" expanded="true" signature="496:613" ph="SELECT m.nam... reviews" />
+                <marker date="1485043354546" expanded="true" signature="671:805" ph="SELECT m.nam... reviews" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenericDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/GenericDao.java">
+      <file leaf-file-name="MovieJdbcTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/dao/MovieJdbcTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="20" column="64" lean-forward="false" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
+            <state relative-caret-position="-110">
+              <caret line="130" column="139" lean-forward="false" selection-start-line="130" selection-start-column="139" selection-end-line="130" selection-end-column="139" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1485001708759" expanded="true" signature="1215:1242" ph="SELECT COUNT... movies" />
+                <marker date="1485001708759" expanded="true" signature="1337:1556" ph="..." />
+                <marker date="1485001708759" expanded="true" signature="2472:2653" ph="SELECT m.nam... movies" />
+                <marker date="1485001708759" expanded="true" signature="2984:3042" ph="SELECT name,... " />
+                <marker date="1485001708759" expanded="true" signature="3367:3559" ph="SELECT c.fna... castmembers" />
+                <marker date="1485001708759" expanded="true" signature="3935:4205" ph="SELECT c.fna... castmembers" />
+                <marker date="1485001708759" expanded="true" signature="4580:4693" ph="SELECT r.ran... reviews" />
+                <marker date="1485001708759" expanded="true" signature="4580:4743" ph="SELECT r.ran... reviews" />
+                <marker date="1485001708759" expanded="true" signature="5044:5155" ph="SELECT m.nam... movies" />
+                <marker date="1485001708759" expanded="true" signature="5044:5245" ph="SELECT m.nam... movies" />
+                <marker date="1485001708759" expanded="true" signature="5594:5766" ph="SELECT u.fna... users" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestConnection.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestConnection.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/entityLayer/TestConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="67" column="70" lean-forward="true" selection-start-line="67" selection-start-column="70" selection-end-line="67" selection-end-column="70" />
+            <state relative-caret-position="594">
+              <caret line="97" column="72" lean-forward="true" selection-start-line="97" selection-start-column="72" selection-end-line="97" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1484952803031" expanded="true" signature="552:579" ph="select count... movies" />
-                <marker date="1484952803031" expanded="true" signature="607:645" ph="SELECT name " />
-                <marker date="1484952803031" expanded="true" signature="1238:1258" ph="SELECT * FRO... movies" />
               </folding>
             </state>
           </provider>
@@ -139,18 +153,18 @@
         <option value="$PROJECT_DIR$/src/connection/DBconnection.java" />
         <option value="$PROJECT_DIR$/src/entityLayer/Entity.java" />
         <option value="$PROJECT_DIR$/src/entityLayer/User.java" />
-        <option value="$PROJECT_DIR$/src/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/dao/GenreDao.java" />
         <option value="$PROJECT_DIR$/test/dao/UserJdbcTest.java" />
-        <option value="$PROJECT_DIR$/src/dao/CastMemberDao.java" />
         <option value="$PROJECT_DIR$/src/entityLayer/Movie.java" />
         <option value="$PROJECT_DIR$/src/entityLayer/CastMember.java" />
-        <option value="$PROJECT_DIR$/src/dao/MovieDao.java" />
-        <option value="$PROJECT_DIR$/src/dao/GenericDao.java" />
-        <option value="$PROJECT_DIR$/src/dao/ReviewDao.java" />
         <option value="$PROJECT_DIR$/src/entityLayer/Review.java" />
         <option value="$PROJECT_DIR$/test/dao/MovieJdbcTest.java" />
+        <option value="$PROJECT_DIR$/src/dao/GenericDao.java" />
+        <option value="$PROJECT_DIR$/src/dao/MovieDao.java" />
+        <option value="$PROJECT_DIR$/src/dao/CastMemberDao.java" />
+        <option value="$PROJECT_DIR$/src/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/entityLayer/TestConnection.java" />
+        <option value="$PROJECT_DIR$/src/dao/ReviewDao.java" />
       </list>
     </option>
   </component>
@@ -246,10 +260,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entityLayer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -290,8 +300,8 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -305,58 +315,6 @@
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RunManager" selected="Application.TestConnection">
-    <configuration default="false" name="MovieJdbcTest.testGetMovieById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="MyProject" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.MovieJdbcTest" />
-      <option name="METHOD_NAME" value="testGetMovieById" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="MovieJdbcTest.testGetCastMemberById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="MyProject" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.MovieJdbcTest" />
-      <option name="METHOD_NAME" value="testGetCastMemberById" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="MovieJdbcTest.testGetReviewById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -417,6 +375,58 @@
       <option name="MAIN_CLASS_NAME" value="dao.MovieJdbcTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="MovieJdbcTest.testGetAllMoviesGenre" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="MyProject" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.MovieJdbcTest" />
+      <option name="METHOD_NAME" value="testGetAllMoviesGenre" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="MovieJdbcTest.testGetAllCastMemberMovies" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="MyProject" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.MovieJdbcTest" />
+      <option name="METHOD_NAME" value="testGetAllCastMemberMovies" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -810,19 +820,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest.testGetMovieById" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest.testGetCastMemberById" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest.testGetReviewById" />
-      <item index="3" class="java.lang.String" itemvalue="Application.TestConnection" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest.testGetReviewById" />
+      <item index="1" class="java.lang.String" itemvalue="Application.TestConnection" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest.testGetAllMoviesGenre" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest.testGetAllCastMemberMovies" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.TestConnection" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest.testGetReviewById" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest.testGetCastMemberById" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest.testGetMovieById" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest.testGetAllCastMemberMovies" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest.testGetAllMoviesGenre" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MovieJdbcTest.testGetReviewById" />
       </list>
     </recent_temporary>
   </component>
@@ -838,15 +848,16 @@
       <updated>1482264826345</updated>
       <workItem from="1484841709842" duration="19922000" />
       <workItem from="1484948096279" duration="4707000" />
+      <workItem from="1484995189683" duration="38623000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MovieJdbcTest - 2017.01.21 at 01h 38m 01s.xml">
-      <configuration name="MovieJdbcTest" configurationId="JUnit" />
+    <history-entry file="MovieJdbcTest_testGetAllCastMemberMovies - 2017.01.21 at 15h 28m 45s.xml">
+      <configuration name="MovieJdbcTest.testGetAllCastMemberMovies" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MovieJdbcTest - 2017.01.21 at 01h 38m 33s.xml">
-      <configuration name="MovieJdbcTest" configurationId="JUnit" />
+    <history-entry file="MovieJdbcTest_testGetAllMoviesGenre - 2017.01.21 at 14h 04m 16s.xml">
+      <configuration name="MovieJdbcTest.testGetAllMoviesGenre" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MovieJdbcTest_testGetCastMemberById - 2017.01.21 at 00h 49m 51s.xml">
       <configuration name="MovieJdbcTest.testGetCastMemberById" configurationId="JUnit" />
@@ -874,7 +885,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24629000" />
+    <option name="totallyTimeSpent" value="63252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -899,10 +910,11 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33369684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293348" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -910,7 +922,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -944,9 +955,6 @@
           <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1484952803031" expanded="true" signature="552:579" ph="select count... movies" />
-            <marker date="1484952803031" expanded="true" signature="607:645" ph="SELECT name " />
-            <marker date="1484952803031" expanded="true" signature="1238:1258" ph="SELECT * FRO... movies" />
           </folding>
         </state>
       </provider>
@@ -957,6 +965,15 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1485041942709" expanded="true" signature="322:379" ph="INSERT INTO movies... " />
+            <marker date="1485041942709" expanded="true" signature="437:496" ph="INSERT INTO movies_genre... " />
+            <marker date="1485041942709" expanded="true" signature="549:569" ph="SELECT * FRO... movies" />
+            <marker date="1485041942709" expanded="true" signature="628:821" ph="SELECT m.nam... movies" />
+            <marker date="1485041942709" expanded="true" signature="877:924" ph="SELECT name,... movies" />
+            <marker date="1485041942709" expanded="true" signature="986:1189" ph="SELECT name,... movies" />
+            <marker date="1485041942709" expanded="true" signature="986:1190" ph="SELECT m.nam... movies" />
+            <marker date="1485041942709" expanded="true" signature="1248:1443" ph="SELECT m.nam... movies" />
+            <marker date="1485041942709" expanded="true" signature="1499:1526" ph="SELECT COUNT... movies" />
           </folding>
         </state>
       </provider>
@@ -965,7 +982,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding />
+          <folding>
+            <marker date="1485041942584" expanded="true" signature="372:442" ph="INSERT INTO castmembers... " />
+            <marker date="1485041942584" expanded="true" signature="502:576" ph="INSERT INTO movies_members... " />
+            <marker date="1485041942584" expanded="true" signature="634:659" ph="SELECT * FRO... castmembers" />
+            <marker date="1485041942584" expanded="true" signature="729:917" ph="SELECT c.fna... castmembers" />
+            <marker date="1485041942584" expanded="true" signature="980:1212" ph="SELECT c.fna... castmembers" />
+            <marker date="1485041942584" expanded="true" signature="1274:1371" ph="SELECT fname... castmembers" />
+            <marker date="1485041942584" expanded="true" signature="1433:1635" ph="SELECT c.fna... castmembers" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -975,15 +1000,17 @@
           <caret line="38" column="63" lean-forward="false" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1484951901714" expanded="true" signature="1215:1242" ph="SELECT COUNT... movies" />
-            <marker date="1484951901714" expanded="true" signature="1337:1556" ph="..." />
-            <marker date="1484951901714" expanded="true" signature="2467:2525" ph="SELECT name,... " />
-            <marker date="1484951901714" expanded="true" signature="2841:3111" ph="SELECT c.fna... castmembers" />
-            <marker date="1484951901714" expanded="true" signature="3486:3599" ph="SELECT r.ran... reviews" />
-            <marker date="1484951901714" expanded="true" signature="3486:3649" ph="SELECT r.ran... reviews" />
-            <marker date="1484951901714" expanded="true" signature="3950:4061" ph="SELECT m.nam... movies" />
-            <marker date="1484951901714" expanded="true" signature="3950:4151" ph="SELECT m.nam... movies" />
-            <marker date="1484951901714" expanded="true" signature="4500:4672" ph="SELECT u.fna... users" />
+            <marker date="1485001708759" expanded="true" signature="1215:1242" ph="SELECT COUNT... movies" />
+            <marker date="1485001708759" expanded="true" signature="1337:1556" ph="..." />
+            <marker date="1485001708759" expanded="true" signature="2472:2653" ph="SELECT m.nam... movies" />
+            <marker date="1485001708759" expanded="true" signature="2984:3042" ph="SELECT name,... " />
+            <marker date="1485001708759" expanded="true" signature="3367:3559" ph="SELECT c.fna... castmembers" />
+            <marker date="1485001708759" expanded="true" signature="3935:4205" ph="SELECT c.fna... castmembers" />
+            <marker date="1485001708759" expanded="true" signature="4580:4693" ph="SELECT r.ran... reviews" />
+            <marker date="1485001708759" expanded="true" signature="4580:4743" ph="SELECT r.ran... reviews" />
+            <marker date="1485001708759" expanded="true" signature="5044:5155" ph="SELECT m.nam... movies" />
+            <marker date="1485001708759" expanded="true" signature="5044:5245" ph="SELECT m.nam... movies" />
+            <marker date="1485001708759" expanded="true" signature="5594:5766" ph="SELECT u.fna... users" />
           </folding>
         </state>
       </provider>
@@ -994,8 +1021,8 @@
           <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2420#2421#0" expanded="true" />
-            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="false" />
+            <element signature="e#2445#2446#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1044,8 +1071,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2420#2421#0" expanded="true" />
-            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="false" />
+            <element signature="e#2445#2446#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1094,8 +1121,8 @@
           <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2420#2421#0" expanded="true" />
-            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="false" />
+            <element signature="e#2445#2446#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1144,8 +1171,8 @@
           <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2420#2421#0" expanded="true" />
-            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="false" />
+            <element signature="e#2445#2446#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1194,8 +1221,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2420#2421#0" expanded="true" />
-            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="false" />
+            <element signature="e#2445#2446#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1269,17 +1296,9 @@
           <caret line="40" column="72" lean-forward="false" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2420#2421#0" expanded="true" />
-            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="false" />
+            <element signature="e#2445#2446#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/connection/DBconnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1298,80 +1317,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
+    <entry file="file://$PROJECT_DIR$/src/connection/DBconnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/ReviewDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="21" column="56" lean-forward="true" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+        <state relative-caret-position="154">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/CastMemberDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entityLayer/TestConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="67" column="70" lean-forward="true" selection-start-line="67" selection-start-column="70" selection-end-line="67" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1484952803031" expanded="true" signature="552:579" ph="select count... movies" />
-            <marker date="1484952803031" expanded="true" signature="607:645" ph="SELECT name " />
-            <marker date="1484952803031" expanded="true" signature="1238:1258" ph="SELECT * FRO... movies" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/GenericDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="20" column="64" lean-forward="false" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
+        <state relative-caret-position="513">
+          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/MovieDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1485020855701" expanded="true" signature="375:391" ph="SELECT * FRO... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/dao/MovieJdbcTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
-          <caret line="40" column="41" lean-forward="true" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+        <state relative-caret-position="-110">
+          <caret line="130" column="139" lean-forward="false" selection-start-line="130" selection-start-column="139" selection-end-line="130" selection-end-column="139" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1484951901714" expanded="true" signature="1215:1242" ph="SELECT COUNT... movies" />
-            <marker date="1484951901714" expanded="true" signature="1337:1556" ph="..." />
-            <marker date="1484951901714" expanded="true" signature="2467:2525" ph="SELECT name,... " />
-            <marker date="1484951901714" expanded="true" signature="2841:3111" ph="SELECT c.fna... castmembers" />
-            <marker date="1484951901714" expanded="true" signature="3486:3599" ph="SELECT r.ran... reviews" />
-            <marker date="1484951901714" expanded="true" signature="3486:3649" ph="SELECT r.ran... reviews" />
-            <marker date="1484951901714" expanded="true" signature="3950:4061" ph="SELECT m.nam... movies" />
-            <marker date="1484951901714" expanded="true" signature="3950:4151" ph="SELECT m.nam... movies" />
-            <marker date="1484951901714" expanded="true" signature="4500:4672" ph="SELECT u.fna... users" />
+            <marker date="1485001708759" expanded="true" signature="1215:1242" ph="SELECT COUNT... movies" />
+            <marker date="1485001708759" expanded="true" signature="1337:1556" ph="..." />
+            <marker date="1485001708759" expanded="true" signature="2472:2653" ph="SELECT m.nam... movies" />
+            <marker date="1485001708759" expanded="true" signature="2984:3042" ph="SELECT name,... " />
+            <marker date="1485001708759" expanded="true" signature="3367:3559" ph="SELECT c.fna... castmembers" />
+            <marker date="1485001708759" expanded="true" signature="3935:4205" ph="SELECT c.fna... castmembers" />
+            <marker date="1485001708759" expanded="true" signature="4580:4693" ph="SELECT r.ran... reviews" />
+            <marker date="1485001708759" expanded="true" signature="4580:4743" ph="SELECT r.ran... reviews" />
+            <marker date="1485001708759" expanded="true" signature="5044:5155" ph="SELECT m.nam... movies" />
+            <marker date="1485001708759" expanded="true" signature="5044:5245" ph="SELECT m.nam... movies" />
+            <marker date="1485001708759" expanded="true" signature="5594:5766" ph="SELECT u.fna... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/MovieDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="78" column="26" lean-forward="false" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1485041942709" expanded="true" signature="322:379" ph="INSERT INTO movies... " />
+            <marker date="1485041942709" expanded="true" signature="437:496" ph="INSERT INTO movies_genre... " />
+            <marker date="1485041942709" expanded="true" signature="549:569" ph="SELECT * FRO... movies" />
+            <marker date="1485041942709" expanded="true" signature="628:821" ph="SELECT m.nam... movies" />
+            <marker date="1485041942709" expanded="true" signature="877:924" ph="SELECT name,... movies" />
+            <marker date="1485041942709" expanded="true" signature="986:1189" ph="SELECT name,... movies" />
+            <marker date="1485041942709" expanded="true" signature="986:1190" ph="SELECT m.nam... movies" />
+            <marker date="1485041942709" expanded="true" signature="1248:1443" ph="SELECT m.nam... movies" />
+            <marker date="1485041942709" expanded="true" signature="1499:1526" ph="SELECT COUNT... movies" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/CastMemberDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="80" column="54" lean-forward="false" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
+          <folding>
+            <marker date="1485041942584" expanded="true" signature="372:442" ph="INSERT INTO castmembers... " />
+            <marker date="1485041942584" expanded="true" signature="502:576" ph="INSERT INTO movies_members... " />
+            <marker date="1485041942584" expanded="true" signature="634:659" ph="SELECT * FRO... castmembers" />
+            <marker date="1485041942584" expanded="true" signature="729:917" ph="SELECT c.fna... castmembers" />
+            <marker date="1485041942584" expanded="true" signature="980:1212" ph="SELECT c.fna... castmembers" />
+            <marker date="1485041942584" expanded="true" signature="1274:1371" ph="SELECT fname... castmembers" />
+            <marker date="1485041942584" expanded="true" signature="1433:1635" ph="SELECT c.fna... castmembers" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="82" column="23" lean-forward="true" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1485041942538" expanded="true" signature="339:418" ph="INSERT INTO users... " />
+            <marker date="1485041942538" expanded="true" signature="470:489" ph="SELECT * FRO... users" />
+            <marker date="1485041942538" expanded="true" signature="553:678" ph="SELECT u.fna... users" />
+            <marker date="1485041942538" expanded="true" signature="733:834" ph="SELECT u.fna... users" />
+            <marker date="1485041942538" expanded="true" signature="901:1060" ph="SELECT u.fna... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/ReviewDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1210">
+          <caret line="17" column="69" lean-forward="false" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
+          <folding>
+            <marker date="1485043354546" expanded="true" signature="295:369" ph="INSERT INTO reviews... " />
+            <marker date="1485043354546" expanded="true" signature="423:444" ph="SELECT * FRO... reviews" />
+            <marker date="1485043354546" expanded="true" signature="496:613" ph="SELECT m.nam... reviews" />
+            <marker date="1485043354546" expanded="true" signature="671:805" ph="SELECT m.nam... reviews" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entityLayer/TestConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="97" column="72" lean-forward="true" selection-start-line="97" selection-start-column="72" selection-end-line="97" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
