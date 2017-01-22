@@ -18,8 +18,6 @@ public class ReviewDao extends GenericDao<Review> {
     private static final String GET_REVIEW_BY_MOVIE = "SELECT m.name, r.rank, r.comment FROM reviews AS r INNER JOIN movies " +
             "AS m ON r.movie_id = m.movie_id WHERE m.name = ?";
 
-    private Connection dbConnection;
-
     @Override
     public void initDB() {
         try {
@@ -27,10 +25,10 @@ public class ReviewDao extends GenericDao<Review> {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        dbConnection = DBconnection.getConnection();
     }
 
     public void addReview(int user_id, int movie_id, int rank, String comment) throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         PreparedStatement pStatement = dbConnection.prepareStatement(ADD_REVIEW);
         pStatement.setInt(1, user_id);
         pStatement.setInt(2, movie_id);
@@ -38,9 +36,11 @@ public class ReviewDao extends GenericDao<Review> {
         pStatement.setString(4, comment);
         pStatement.executeUpdate();
         pStatement.close();
+        dbConnection.close();
     }
 
     public void getAllReviews() throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         Statement statement = dbConnection.createStatement();
         ResultSet result = statement.executeQuery(GET_ALL_REVIEWS);
         while (result.next()) {
@@ -50,9 +50,11 @@ public class ReviewDao extends GenericDao<Review> {
         }
         statement.close();
         result.close();
+        dbConnection.close();
     }
 
     public void getAllRanks() throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         Statement statement = dbConnection.createStatement();
         ResultSet result = statement.executeQuery(GET_ALL_RANKS);
         while (result.next()) {
@@ -61,9 +63,11 @@ public class ReviewDao extends GenericDao<Review> {
         }
         statement.close();
         result.close();
+        dbConnection.close();
     }
 
     public void getReviewByMovie(String name) throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         PreparedStatement pStatement = dbConnection.prepareStatement(GET_REVIEW_BY_MOVIE);
         pStatement.setString(1, name);
         ResultSet result = pStatement.executeQuery();
@@ -73,6 +77,7 @@ public class ReviewDao extends GenericDao<Review> {
         }
         pStatement.close();
         result.close();
+        dbConnection.close();
     }
 
     @Override
@@ -88,14 +93,5 @@ public class ReviewDao extends GenericDao<Review> {
             ex.printStackTrace();
         }
         return result;
-    }
-
-    @Override
-    public void closeConnection() {
-        try {
-            dbConnection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 }

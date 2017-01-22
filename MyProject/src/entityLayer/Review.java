@@ -32,6 +32,11 @@ public class Review implements Entity {
         this.textOfComment = textOfComment;
     }
 
+    public Review(int rating, String textOfComment) {
+        this.rating = rating;
+        this.textOfComment = textOfComment;
+    }
+
     public Movie getMovie() {
         return movie;
     }

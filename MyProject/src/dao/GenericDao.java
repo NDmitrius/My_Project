@@ -31,6 +31,4 @@ public abstract class GenericDao <T extends Entity> {
         }
         return null;
     }
-
-    public abstract void closeConnection();
 }

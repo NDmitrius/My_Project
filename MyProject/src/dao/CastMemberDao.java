@@ -26,8 +26,6 @@ public class CastMemberDao extends GenericDao<CastMember> {
     private static final String GET_CASTMEMBERS_BY_TYPE = "SELECT c.fname, c.lname, c.date_of_birth, mm.member_type FROM castmembers AS c \n" +
             "INNER JOIN movies_members AS mm ON c.cm_id = mm.cm_id WHERE mm.member_type = ? GROUP BY c.fname, c.lname";
 
-    private Connection dbConnection;
-
     @Override
     public void initDB() {
         try {
@@ -35,7 +33,6 @@ public class CastMemberDao extends GenericDao<CastMember> {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        dbConnection = DBconnection.getConnection();
     }
 
     @Override
@@ -56,24 +53,29 @@ public class CastMemberDao extends GenericDao<CastMember> {
     }
 
     public void addInTableCastMembers(String fname, String lname, LocalDate date_of_birth) throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         PreparedStatement pStatement = dbConnection.prepareStatement(ADD_IN_CASTMEMBERS);
         pStatement.setString(1, fname);
         pStatement.setString(2, lname);
         pStatement.setObject(3, date_of_birth);
         pStatement.executeUpdate();
         pStatement.close();
+        dbConnection.close();
     }
 
     public void addInTableMoviesMembers(int movie_id, int cm_id, String member_type) throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         PreparedStatement pStatement = dbConnection.prepareStatement(ADD_IN_MOVIES_MEMBERS);
         pStatement.setInt(1, movie_id);
         pStatement.setInt(2, cm_id);
         pStatement.setString(2, member_type);
         pStatement.executeUpdate();
         pStatement.close();
+        dbConnection.close();
     }
 
     public void getAllCastMembers() throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         Statement statement = dbConnection.createStatement();
         ResultSet result = statement.executeQuery(GET_ALL_CASTMEMBERS);
         while (result.next()) {
@@ -82,9 +84,11 @@ public class CastMemberDao extends GenericDao<CastMember> {
         }
         statement.close();
         result.close();
+        dbConnection.close();
     }
 
     public void getAllCastmembersWithMovies() throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         Statement statement = dbConnection.createStatement();
         ResultSet result = statement.executeQuery(GET_ALL_CASTMEMBERS_WITH_MOVIES);
         while (result.next()) {
@@ -93,9 +97,11 @@ public class CastMemberDao extends GenericDao<CastMember> {
         }
         statement.close();
         result.close();
+        dbConnection.close();
     }
 
     public void getCatMemberByMovie(String name) throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         PreparedStatement pStatement = dbConnection.prepareStatement(GET_CASTMEMBERS_BY_MOVIE);
         pStatement.setString(1, name);
         ResultSet result = pStatement.executeQuery();
@@ -105,9 +111,11 @@ public class CastMemberDao extends GenericDao<CastMember> {
         }
         pStatement.close();
         result.close();
+        dbConnection.close();
     }
 
     public void getCastmembersByName(String name) throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         PreparedStatement pStatement = dbConnection.prepareStatement(GET_CASTMEMBERS_BY_NAME);
         pStatement.setString(1, name);
         pStatement.setString(2, name);
@@ -118,9 +126,11 @@ public class CastMemberDao extends GenericDao<CastMember> {
         }
         pStatement.close();
         result.close();
+        dbConnection.close();
     }
 
     public void getCastmembersByType(String profession) throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         PreparedStatement pStatement = dbConnection.prepareStatement(GET_CASTMEMBERS_BY_TYPE);
         pStatement.setString(1, profession);
         ResultSet result = pStatement.executeQuery();
@@ -130,14 +140,6 @@ public class CastMemberDao extends GenericDao<CastMember> {
         }
         pStatement.close();
         result.close();
-    }
-
-    @Override
-    public void closeConnection() {
-        try {
-            dbConnection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        dbConnection.close();
     }
 }

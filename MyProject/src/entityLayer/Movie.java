@@ -10,32 +10,32 @@ public class Movie implements Entity {
 
     private long id;
     private String name;
-    private List<CastMember> actors;
     private List<CastMember> director;
+    private List<CastMember> actors;
     private LocalDate year;
     private String country;
-    private Genre genre;
-    private Review review;
+    private List<Genre> genre;
+    private List<Review> reviews;
 
-    public Movie(String name, List<CastMember> actors, List<CastMember> director, LocalDate year, String country, Genre genre) {
+    public Movie(String name, List<CastMember> director, List<CastMember> actors, LocalDate year, String country, List<Genre> genre) {
         this.name = name;
-        this.actors = actors;
         this.director = director;
+        this.actors = actors;
         this.year = year;
         this.country = country;
         this.genre = genre;
     }
 
-    public Movie(long id, String name, List<CastMember> actors, List<CastMember> director, LocalDate year, String country,
-                 Genre genre, Review review) {
+    public Movie(long id, String name, List<CastMember> director, List<CastMember> actors, LocalDate year, String country,
+                 List<Genre> genre, List<Review> reviews) {
         this.id = id;
         this.name = name;
-        this.actors = actors;
         this.director = director;
+        this.actors = actors;
         this.year = year;
         this.country = country;
         this.genre = genre;
-        this.review = review;
+        this.reviews = reviews;
     }
 
     public Movie(long id, String name, LocalDate year, String country) {
@@ -43,6 +43,16 @@ public class Movie implements Entity {
         this.name = name;
         this.year = year;
         this.country = country;
+    }
+
+    public Movie(long id, String name, List<CastMember> director, List<CastMember> actors, LocalDate year, String country, List<Review> reviews) {
+        this.id = id;
+        this.name = name;
+        this.director = director;
+        this.actors = actors;
+        this.year = year;
+        this.country = country;
+        this.reviews = reviews;
     }
 
     public String getName() {
@@ -85,20 +95,20 @@ public class Movie implements Entity {
         this.country = country;
     }
 
-    public Genre getGenre() {
+    public List<Genre> getGenre() {
         return genre;
     }
 
-    public void setGenre(Genre genre) {
+    public void setGenre(List<Genre> genre) {
         this.genre = genre;
     }
 
-    public Review getReview() {
-        return review;
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
     }
 
-    public void setReview(Review review) {
-        this.review = review;
+    public List<Review> getReviews() {
+        return reviews;
     }
 
     public void setId(long id) {

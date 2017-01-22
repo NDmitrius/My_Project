@@ -31,7 +31,7 @@ public class TestConnection {
 //            movieDao.addInTableMoviesGenre(12, 21);
 //            movieDao.addInTableMoviesGenre(12, 6);
 //            movieDao.addInTableMoviesGenre(12, 3);
-            movieDao.getAllMovies();
+            //movieDao.getAllMovies();
             System.out.println();
             movieDao.getNumberMovies();
             System.out.println();
@@ -39,12 +39,12 @@ public class TestConnection {
             System.out.println();
             movieDao.getMovieByYear(2007);
             System.out.println();
-            movieDao.getMovieByCastmember("Орландо", "Блум");
+            //movieDao.getMovieByCastmember("Орландо", "Блум");
             System.out.println();
             movieDao.getMovieByGenre("боевик");
 //            Movie movie = movieDao.getById(2L);
 //            System.out.println(movie.getId() + " " + movie.getName());
-            movieDao.closeConnection();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -65,7 +65,7 @@ public class TestConnection {
             System.out.println();
             castMemberDao.getCastmembersByType("режиссер");
             castMemberDao.getCastmembersByType("актер");
-            movieDao.closeConnection();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }

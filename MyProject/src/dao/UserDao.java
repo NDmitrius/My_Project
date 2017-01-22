@@ -22,8 +22,6 @@ public class UserDao extends GenericDao<User> {
     private static final String GET_USER_BY_NAME_WITH_REVIEW = "SELECT u.fname, u.lname, u.mname, r.comment FROM users AS u " +
             "INNER JOIN reviews AS r ON u.user_id = r.user_id WHERE u.fname = ? AND u.lname = ?";
 
-    private Connection dbConnection;
-
     @Override
     public void initDB() {
         try {
@@ -31,10 +29,10 @@ public class UserDao extends GenericDao<User> {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        dbConnection = DBconnection.getConnection();
     }
 
     public void addUser(String fname, String lname, String mname, String email, String password) throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         PreparedStatement pStatement = dbConnection.prepareStatement(ADD_USER);
         pStatement.setString(1, fname);
         pStatement.setString(2, lname);
@@ -43,9 +41,11 @@ public class UserDao extends GenericDao<User> {
         pStatement.setString(5, password);
         pStatement.executeUpdate();
         pStatement.close();
+        dbConnection.close();
     }
 
     public void getAllUsers() throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         Statement statement = dbConnection.createStatement();
         ResultSet result = statement.executeQuery(GET_ALL_USERS);
         while (result.next()) {
@@ -56,9 +56,11 @@ public class UserDao extends GenericDao<User> {
         }
         statement.close();
         result.close();
+        dbConnection.close();
     }
 
     public void getAllUsersWithReview() throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         Statement statement = dbConnection.createStatement();
         ResultSet result = statement.executeQuery(GET_ALL_USERS_WITH_REVIEW);
         while (result.next()) {
@@ -67,9 +69,11 @@ public class UserDao extends GenericDao<User> {
         }
         statement.close();
         result.close();
+        dbConnection.close();
     }
 
     public void getUserByName(String fname, String lname) throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         PreparedStatement pStatement = dbConnection.prepareStatement(GET_USER_BY_NAME);
         pStatement.setString(1, fname);
         pStatement.setString(2, lname);
@@ -81,9 +85,11 @@ public class UserDao extends GenericDao<User> {
         }
         pStatement.close();
         result.close();
+        dbConnection.close();
     }
 
     public void getUserByNameWithReview(String fname, String lname) throws SQLException {
+        Connection dbConnection = DBconnection.getConnection();
         PreparedStatement pStatement = dbConnection.prepareStatement(GET_USER_BY_NAME_WITH_REVIEW);
         pStatement.setString(1, fname);
         pStatement.setString(2, lname);
@@ -94,6 +100,7 @@ public class UserDao extends GenericDao<User> {
         }
         pStatement.close();
         result.close();
+        dbConnection.close();
     }
 
     @Override
@@ -110,14 +117,5 @@ public class UserDao extends GenericDao<User> {
             ex.printStackTrace();
         }
         return result;
-    }
-
-    @Override
-    public void closeConnection() {
-        try {
-            dbConnection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 }
