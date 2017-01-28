@@ -1,4 +1,4 @@
-#USE movies_db;
+USE movies_db;
 INSERT INTO castmembers (fname, lname, date_of_birth) VALUES ('Питер', 'Джексон', '1961-10-31');
 INSERT INTO movies_members (movie_id, cm_id, member_type) VALUES (1, 1, 'режиссер');
 INSERT INTO movies_members (movie_id, cm_id, member_type) VALUES (2, 1, 'режиссер');

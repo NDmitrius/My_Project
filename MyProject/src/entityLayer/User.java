@@ -9,23 +9,31 @@ public class User implements Entity {
     private String firstName;
     private String lastName;
     private String middleName;
-    private String password;
     private String email;
+    private String password;
 
-    public User(String firstName, String lastName, String middleName, String password, String email) {
+    public User(String firstName, String lastName, String middleName, String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
-        this.password = password;
         this.email = email;
+        this.password = password;
     }
 
-    public User(long id, String firstName, String lastName, String middleName, String password, String email) {
+    public User(long id, String firstName, String lastName, String middleName, String email, String password) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
+        this.email = email;
         this.password = password;
+    }
+
+    public User(long id, String firstName, String lastName, String middleName, String email) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName;
         this.email = email;
     }
 
@@ -76,5 +84,25 @@ public class User implements Entity {
     @Override
     public long getId() {
         return id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+
+        if (firstName != null ? !firstName.equals(user.firstName) : user.firstName != null) return false;
+        if (lastName != null ? !lastName.equals(user.lastName) : user.lastName != null) return false;
+        return middleName != null ? middleName.equals(user.middleName) : user.middleName == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = firstName != null ? firstName.hashCode() : 0;
+        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+        result = 31 * result + (middleName != null ? middleName.hashCode() : 0);
+        return result;
     }
 }

@@ -4,12 +4,27 @@ package entityLayer;
  * Created by DMITRIUS on 03.01.2017.
  */
 public enum Genre {
-    ANIME,
+    ANIME {
+        @Override
+        public String toWrite() {
+            return "аниме";
+        }
+    },
     BIOGRAPHICAL,
-    ACTION,
+    ACTION {
+        @Override
+        public String toWrite() {
+            return "боевик";
+        }
+    },
     WESTERN,
     MILITARY,
-    DETECTIVE,
+    DETECTIVE {
+        @Override
+        public String toWrite() {
+            return "детектив";
+        }
+    },
     CHILDREN,
     DOCUMENTARY,
     DRAMA,
@@ -24,7 +39,12 @@ public enum Genre {
     CARTOON,
     THE_MUSICAL,
     SCIENTIFIC,
-    ADVENTURE,
+    ADVENTURE {
+        @Override
+        public String toWrite() {
+            return "приключение";
+        }
+    },
     REALITY_SHOW,
     FAMILY,
     SPORT,
@@ -32,6 +52,15 @@ public enum Genre {
     HORROR,
     FICTION,
     FILM_NOIR,
-    FANTASY,
-    EROTIC
+    FANTASY {
+        @Override
+        public String toWrite() {
+            return "фэнтези";
+        }
+    },
+    EROTIC;
+
+    public String toWrite() {
+        return super.toString();
+    }
 }

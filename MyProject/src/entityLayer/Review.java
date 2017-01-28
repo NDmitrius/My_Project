@@ -77,4 +77,30 @@ public class Review implements Entity {
     public long getId() {
         return id;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Review review = (Review) o;
+
+        return textOfComment != null ? textOfComment.equals(review.textOfComment) : review.textOfComment == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return textOfComment != null ? textOfComment.hashCode() : 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Review{" +
+                "id=" + id +
+                ", movie=" + movie +
+                ", user=" + user +
+                ", rating=" + rating +
+                ", textOfComment='" + textOfComment + '\'' +
+                '}';
+    }
 }

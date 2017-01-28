@@ -1,7 +1,7 @@
 package entityLayer;
 
 import java.time.LocalDate;
-import java.util.List;
+import java.util.Set;
 
 /**
  * Created by DMITRIUS on 20.12.2016.
@@ -10,14 +10,14 @@ public class Movie implements Entity {
 
     private long id;
     private String name;
-    private List<CastMember> director;
-    private List<CastMember> actors;
+    private Set<CastMember> director;
+    private Set<CastMember> actors;
     private LocalDate year;
     private String country;
-    private List<Genre> genre;
-    private List<Review> reviews;
+    private Set<Genre> genre;
+    private Set<Review> reviews;
 
-    public Movie(String name, List<CastMember> director, List<CastMember> actors, LocalDate year, String country, List<Genre> genre) {
+    public Movie(String name, Set<CastMember> director, Set<CastMember> actors, LocalDate year, String country, Set<Genre> genre) {
         this.name = name;
         this.director = director;
         this.actors = actors;
@@ -26,8 +26,8 @@ public class Movie implements Entity {
         this.genre = genre;
     }
 
-    public Movie(long id, String name, List<CastMember> director, List<CastMember> actors, LocalDate year, String country,
-                 List<Genre> genre, List<Review> reviews) {
+    public Movie(long id, String name, Set<CastMember> director, Set<CastMember> actors, LocalDate year, String country,
+                 Set<Genre> genre, Set<Review> reviews) {
         this.id = id;
         this.name = name;
         this.director = director;
@@ -45,7 +45,7 @@ public class Movie implements Entity {
         this.country = country;
     }
 
-    public Movie(long id, String name, List<CastMember> director, List<CastMember> actors, LocalDate year, String country, List<Review> reviews) {
+    public Movie(long id, String name, Set<CastMember> director, Set<CastMember> actors, LocalDate year, String country, Set<Review> reviews) {
         this.id = id;
         this.name = name;
         this.director = director;
@@ -53,6 +53,16 @@ public class Movie implements Entity {
         this.year = year;
         this.country = country;
         this.reviews = reviews;
+    }
+
+    public Movie(String name, LocalDate year, String country, Set<Genre> genre) {
+        this.name = name;
+        this.year = year;
+        this.country = country;
+        this.genre = genre;
+    }
+
+    public Movie() {
     }
 
     public String getName() {
@@ -63,19 +73,19 @@ public class Movie implements Entity {
         this.name = name;
     }
 
-    public List<CastMember> getActors() {
+    public Set<CastMember> getActors() {
         return actors;
     }
 
-    public void setActors(List<CastMember> actors) {
+    public void setActors(Set<CastMember> actors) {
         this.actors = actors;
     }
 
-    public List<CastMember> getDirector() {
+    public Set<CastMember> getDirector() {
         return director;
     }
 
-    public void setDirector(List<CastMember> director) {
+    public void setDirector(Set<CastMember> director) {
         this.director = director;
     }
 
@@ -95,19 +105,19 @@ public class Movie implements Entity {
         this.country = country;
     }
 
-    public List<Genre> getGenre() {
+    public Set<Genre> getGenre() {
         return genre;
     }
 
-    public void setGenre(List<Genre> genre) {
+    public void setGenre(Set<Genre> genre) {
         this.genre = genre;
     }
 
-    public void setReviews(List<Review> reviews) {
+    public void setReviews(Set<Review> reviews) {
         this.reviews = reviews;
     }
 
-    public List<Review> getReviews() {
+    public Set<Review> getReviews() {
         return reviews;
     }
 
@@ -118,5 +128,37 @@ public class Movie implements Entity {
     @Override
     public long getId() {
         return id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Movie movie = (Movie) o;
+
+        if (id != movie.id) return false;
+        return name != null ? name.equals(movie.name) : movie.name == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", director=" + director +
+                ", actors=" + actors +
+                ", year=" + year +
+                ", country='" + country + '\'' +
+                ", genre=" + genre +
+                ", reviews=" + reviews +
+                '}';
     }
 }

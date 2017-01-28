@@ -4,6 +4,8 @@ import connection.DBconnection;
 import entityLayer.Review;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by DMITRIUS on 17.01.2017.
@@ -39,18 +41,50 @@ public class ReviewDao extends GenericDao<Review> {
         dbConnection.close();
     }
 
-    public void getAllReviews() throws SQLException {
-        Connection dbConnection = DBconnection.getConnection();
-        Statement statement = dbConnection.createStatement();
-        ResultSet result = statement.executeQuery(GET_ALL_REVIEWS);
-        while (result.next()) {
-            System.out.println(result.getLong("review_id") + ". id фильма: " + result.getInt("movie_id")
-                    + ", id Пользователя: " + result.getInt("user_id") + ", Оценка: " + result.getInt("rank")
-                    + ", Комментарий: " + result.getString("comment"));
+    public Review addReviews(Review review) {
+        try {
+            Connection dbConnection = DBconnection.getConnection();
+            if(dbConnection != null) {
+                PreparedStatement pStatement = dbConnection.prepareStatement(ADD_REVIEW, Statement.RETURN_GENERATED_KEYS);
+                pStatement.setLong(1, review.getUser().getId());
+                pStatement.setLong(2, review.getMovie().getId());
+                pStatement.setInt(3, review.getRating());
+                pStatement.setString(4, review.getTextOfComment());
+                pStatement.executeUpdate();
+                ResultSet result = pStatement.getGeneratedKeys();
+                while (result.next()) {
+                    review.setId(result.getLong("revie_id"));
+                }
+                pStatement.close();
+                dbConnection.close();
+                return review;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        statement.close();
-        result.close();
-        dbConnection.close();
+        return null;
+    }
+
+    public List<Review> getAllReviews() {
+        List<Review> reviewList = new ArrayList<>();
+        try {
+            Connection dbConnection = DBconnection.getConnection();
+            if(dbConnection != null) {
+                Statement statement = dbConnection.createStatement();
+                ResultSet result = statement.executeQuery(GET_ALL_REVIEWS);
+                while (result.next()) {
+                    reviewList.add(new Review(result.getLong("review_id"),
+                            result.getInt("rank"), result.getString("comment")));
+                }
+                statement.close();
+                result.close();
+                dbConnection.close();
+                return reviewList;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public void getAllRanks() throws SQLException {
@@ -79,6 +113,8 @@ public class ReviewDao extends GenericDao<Review> {
         result.close();
         dbConnection.close();
     }
+
+
 
     @Override
     public Review getById(long id) {

@@ -22,12 +22,12 @@ cm_id INT AUTO_INCREMENT PRIMARY KEY,
 fname VARCHAR(20) NOT NULL,
 lname VARCHAR(20) NOT NULL,
 mname VARCHAR(30),
-dateOfBirth DATE
+date_Of_Birth DATE
 );
 CREATE TABLE movies_members (
 movie_id INT NOT NULL,
 cm_id INT NOT NULL,
-memberType VARCHAR(20) NOT NULL,
+member_Type VARCHAR(20) NOT NULL,
 PRIMARY KEY (movie_id, cm_id),
 FOREIGN KEY (movie_id) REFERENCES movies (movie_id),
 FOREIGN KEY (cm_id) REFERENCES castMembers (cm_id)

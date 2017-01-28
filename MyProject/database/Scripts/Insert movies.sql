@@ -1,4 +1,4 @@
-#USE movies_db;
+USE movies_db;
 INSERT INTO movies (name, year, country) VALUES ('Властелин колец: Братство кольца', '2001', 'США');
 INSERT INTO movies_genre (movie_id, genre_id) VALUES (1, 29);
 INSERT INTO movies_genre (movie_id, genre_id) VALUES (1, 21);
