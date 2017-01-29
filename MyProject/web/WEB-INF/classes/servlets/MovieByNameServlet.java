@@ -27,29 +27,33 @@ public class MovieByNameServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        resp.setContentType("text/html; charset=utf-8");
-        String name = req.getParameter("nameMovie");
-        if(name != null) {
-            req.setAttribute("movie", MovieService.getInst().findMovie(name));
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/WEB-INF/jsp/MovieByNameView.jsp");
-            requestDispatcher.forward(req, resp);
-        } else {
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/WEB-INF/jsp/Search-Movie.jsp");
-            requestDispatcher.include(req, resp);
-        }
-
-
-
+//        resp.setContentType("text/html; charset=utf-8");
+//        String name = req.getParameter("nameMovie");
+//        System.out.println(name);
+//        if(name != null) {
+//            req.setAttribute("movie", MovieService.getInst().findMovie(name));
+//            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/WEB-INF/jsp/MovieByNameView.jsp");
+//            requestDispatcher.forward(req, resp);
+//        } else {
+//            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/WEB-INF/jsp/Search-Movie.jsp");
+//            requestDispatcher.include(req, resp);
+//        }
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        doPost(req, resp);
-//        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsp/Search-Movie.jsp");
-//        requestDispatcher.include(req, resp);
+        resp.setContentType("text/html; charset=utf-8");
+        String name = req.getParameter("nameMovie");
+        System.out.println(name);
+        if(name != null) {
+            req.getSession().setAttribute("movie", MovieService.getInst().findMovie(name));
+            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsp/MovieByNameView.jsp");
+            requestDispatcher.forward(req, resp);
+        } else {
+            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsp/Search-Movie.jsp");
+            requestDispatcher.include(req, resp);
+        }
     }
-
-
-
 }
+

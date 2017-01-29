@@ -10,6 +10,9 @@ public class UserDto {
     private String middleName;
     private String email;
 
+    public UserDto() {
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -40,5 +43,15 @@ public class UserDto {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "UserDto{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

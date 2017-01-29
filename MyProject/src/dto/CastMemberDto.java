@@ -9,9 +9,11 @@ public class CastMemberDto {
 
     private String firstName;
     private String lastName;
-    private String middleName;
     private LocalDate dateOfBirth;
     private String memberType;
+
+    public CastMemberDto() {
+    }
 
     public String getFirstName() {
         return firstName;
@@ -29,14 +31,6 @@ public class CastMemberDto {
         this.lastName = lastName;
     }
 
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
@@ -51,5 +45,15 @@ public class CastMemberDto {
 
     public void setMemberType(String memberType) {
         this.memberType = memberType;
+    }
+
+    @Override
+    public String toString() {
+        return "CastMemberDto{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", memberType='" + memberType + '\'' +
+                '}';
     }
 }

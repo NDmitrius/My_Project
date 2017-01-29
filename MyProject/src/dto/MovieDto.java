@@ -45,10 +45,9 @@ public class MovieDto {
     }
 
     public MovieDto(String name, LocalDate year, String country) {
-
-    }
-
-    public MovieDto(String name, Set<CastMember> director, Set<CastMember> actors, LocalDate year, String country) {
+        this.name = name;
+        this.year = year;
+        this.country = country;
     }
 
     public String getName() {

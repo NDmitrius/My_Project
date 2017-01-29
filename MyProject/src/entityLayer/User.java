@@ -105,4 +105,13 @@ public class User implements Entity {
         result = 31 * result + (middleName != null ? middleName.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return
+                firstName + " " +
+                lastName + " " +
+                middleName + " " +
+                email;
+    }
 }

@@ -8,6 +8,9 @@ public class ReviewDto {
     private int rating;
     private String textOfComment;
 
+    public ReviewDto() {
+    }
+
     public int getRating() {
         return rating;
     }
@@ -22,5 +25,13 @@ public class ReviewDto {
 
     public void setTextOfComment(String textOfComment) {
         this.textOfComment = textOfComment;
+    }
+
+    @Override
+    public String toString() {
+        return "ReviewDto{" +
+                "rating=" + rating +
+                ", textOfComment='" + textOfComment + '\'' +
+                '}';
     }
 }

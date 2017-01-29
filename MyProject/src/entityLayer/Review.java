@@ -95,12 +95,8 @@ public class Review implements Entity {
 
     @Override
     public String toString() {
-        return "Review{" +
-                "id=" + id +
-                ", movie=" + movie +
-                ", user=" + user +
-                ", rating=" + rating +
-                ", textOfComment='" + textOfComment + '\'' +
-                '}';
+        return
+                rating + " " +
+                textOfComment;
     }
 }

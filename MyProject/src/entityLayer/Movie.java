@@ -62,6 +62,12 @@ public class Movie implements Entity {
         this.genre = genre;
     }
 
+    public Movie(String name, LocalDate year, String country) {
+        this.name = name;
+        this.year = year;
+        this.country = country;
+    }
+
     public Movie() {
     }
 
@@ -150,15 +156,12 @@ public class Movie implements Entity {
 
     @Override
     public String toString() {
-        return "Movie{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", director=" + director +
-                ", actors=" + actors +
-                ", year=" + year +
-                ", country='" + country + '\'' +
-                ", genre=" + genre +
-                ", reviews=" + reviews +
-                '}';
+        return
+                name + '\'' +
+                director +
+                actors +
+                year +
+                country + '\'' +
+                reviews ;
     }
 }

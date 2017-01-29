@@ -47,13 +47,12 @@ public class MovieDao extends GenericDao<Movie> {
             "LEFT JOIN reviews AS r ON r.movie_id = m.movie_id LEFT JOIN users AS u ON u.user_id = r.user_id " +
             "ORDER BY m.movie_id";
     private static final String GET_MOVIE_FROM_ALL_BY_NAME = "SELECT m.movie_id, m.name, m.year, m.country, g.genre, c.cm_id, " +
-            "c.fname, c.lname, c.mname, c.date_of_birth, mm.member_type, u.fname, u.lname, r.review_id, r.rank, r.comment FROM movies AS m " +
+            "c.fname, c.lname, c.date_of_birth, mm.member_type, u.fname, u.lname, r.review_id, r.rank, r.comment FROM movies AS m " +
             "INNER JOIN movies_genre AS mg ON m.movie_id = mg.movie_id " +
             "JOIN genre AS g ON mg.genre_id = g.genre_id " +
             "JOIN movies_members AS mm ON m.movie_id = mm.movie_id \n" +
             "JOIN castmembers AS c ON mm.cm_id = c.cm_id " +
-            "LEFT JOIN reviews AS r ON r.movie_id = m.movie_id LEFT JOIN users AS u ON u.user_id = r.user_id WHERE m.name = ?" +
-            " ";
+            "LEFT JOIN reviews AS r ON r.movie_id = m.movie_id LEFT JOIN users AS u ON u.user_id = r.user_id WHERE m.name = ?";
 
 
 
@@ -173,12 +172,12 @@ public class MovieDao extends GenericDao<Movie> {
 
                     if (result.getString("member_type").equals("режиссер")) {
                         listDirectors.add(new CastMember(result.getString("fname"),
-                                result.getString("c.lname"), result.getString("c.mname"),
+                                result.getString("c.lname"),
                                 result.getObject("c.date_of_birth", LocalDate.class),
                                 result.getString("member_type")));
                     } else {
                         listActors.add(new CastMember(result.getString("c.fname"),
-                                result.getString("c.lname"), result.getString("c.mname"),
+                                result.getString("c.lname"),
                                 result.getObject("c.date_of_birth", LocalDate.class),
                                 result.getString("member_type")));
                     }
@@ -220,12 +219,12 @@ public class MovieDao extends GenericDao<Movie> {
 
                     if (result.getString("member_type").equals("режиссер")) {
                         listDirectors.add(new CastMember(result.getString("fname"),
-                                result.getString("c.lname"), result.getString("c.mname"),
+                                result.getString("c.lname"),
                                 result.getObject("c.date_of_birth", LocalDate.class),
                                 result.getString("member_type")));
                     } else {
                         listActors.add(new CastMember(result.getString("c.fname"),
-                                result.getString("c.lname"), result.getString("c.mname"),
+                                result.getString("c.lname"),
                                 result.getObject("c.date_of_birth", LocalDate.class),
                                 result.getString("member_type")));
                     }
@@ -295,12 +294,12 @@ public class MovieDao extends GenericDao<Movie> {
 
                     if (result.getLong("movie_id") == result.getLong("movie_id") && result.getString("member_type").equals("режиссер")) {
                         listDirectors.add(new CastMember(result.getString("fname"),
-                                result.getString("c.lname"), result.getString("c.mname"),
+                                result.getString("c.lname"),
                                 result.getObject("c.date_of_birth", LocalDate.class),
                                 result.getString("member_type")));
                     } else {
                         listActors.add(new CastMember(result.getString("c.fname"),
-                                result.getString("c.lname"), result.getString("c.mname"),
+                                result.getString("c.lname"),
                                 result.getObject("c.date_of_birth", LocalDate.class),
                                 result.getString("member_type")));
                     }

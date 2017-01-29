@@ -143,13 +143,9 @@ public class CastMember implements Entity {
 
     @Override
     public String toString() {
-        return "CastMember{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
-                ", memberType='" + memberType + '\'' +
-                '}';
+        return
+                firstName + " " +
+                lastName + " " +
+                dateOfBirth + '\n';
     }
 }

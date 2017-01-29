@@ -8,5 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <header>
-    <p align="center">Шапка сайта</p>
+    <p align="center"><strong>Небольшая видеотека</strong></p>
+    <a href="${pageContext.servletContext.contextPath}index.jsp">Главная</a><span>  /  </span>
+    <a href="${pageContext.servletContext.contextPath}all-movies">Все фильмы</a><span>  /  </span>
+    <a href="${pageContext.servletContext.contextPath}search-movie"> Поиск фильма</a><span>  /  </span>
+    <a href="${pageContext.servletContext.contextPath}add-movie"> Добавление фильма</a><span>  /  </span>
+    <a href="${pageContext.servletContext.contextPath}add-user"> Регистрация пользователя</a>
 </header>

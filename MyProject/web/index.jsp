@@ -8,9 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>Главная</title>
   </head>
-  <body>
-  $END$
+  <body bgcolor="#ffe4c4">
+  <jsp:include page="/WEB-INF/jsp/Movie-header.jsp"/>
+  <h1>ВИДЕОТЕКА</h1>
+  <jsp:include page="/WEB-INF/jsp/Movie-footer.jsp"/>
   </body>
 </html>

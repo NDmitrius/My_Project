@@ -7,23 +7,25 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Результат поиска</title>
 </head>
 <jsp:include page="Movie-header.jsp"/>
 <body bgcolor="#ffe4c4">
-<a href="${pageContext.servletContext.contextPath}all-movies">Все фильмы</a>
-<h1>${requestScope.movie.name}</h1>
 
+<h1>${sessionScope.movie.name}</h1>
+<p><b>Релиз: </b>${sessionScope.movie.year}</p><br>
+<p><b>Страна:</b> ${sessionScope.movie.country}</p><br>
+<p><b>Режиссер: </b> ${sessionScope.movie.director} </p><br>
 
-
-<%--<c:out value="${param.name}" default="Введите полное название фильма."/>--%>
-<%--<p>${requestScope.movie.name}</p>--%>
-<%--<c:forEach var="director" items="${requestScope.movie.director}">--%>
-    <%--${movie.director.firstName}--%>
+<p><b>Актеры: </b> ${sessionScope.movie.actors}</p><br>
+<%--<c:forEach var="actor" items="${sessionScope.movie.actors}">--%>
+    <%--${actor.firstName}${" "}${actor.lastName}<br>--%>
 <%--</c:forEach>--%>
-<a href="search-movie"> Назад</a>
+<p><b>Отзыв: </b> ${sessionScope.movie.reviews} </p><br>
+<a href="${pageContext.servletContext.contextPath}search-movie"> Назад к поиску</a>
 <jsp:include page="Movie-footer.jsp"/>
 </body>
 </html>
